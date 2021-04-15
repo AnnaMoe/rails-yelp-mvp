@@ -1,7 +1,11 @@
 <%= simple_form_for(@restaurant) do |f| %>
   <%= f.input :name %>
-  <%= f.input :category %>
+
+  <label class="string required" for="restaurant_category">Category <abbr title="required">*</abbr></label>
+  <%= f.select :category, [['Chinese', 'chinese'], ['Italian', 'italian'], , ['Italian', 'italian']] %>
+  
   <%= f.input :address %>
   <%= f.input :phone_number %>
   <%= f.button :submit %>
+
   <% end %>

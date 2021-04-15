@@ -23,7 +23,11 @@
   <hr>
 <% end %>
 </p>
-
-
-<p><%= link_to 'Add a new review', new_restaurant_review_path(@restaurant), class: "btn btn-primary" %></p>
-<p><%= link_to 'Back', restaurants_path %></p>
+<div class="container">
+  <div class="row"> 
+    <p>Add a review:</p>
+    <%= render 'reviews/form' %>
+    <br>
+    <p><%= link_to 'Back', restaurants_path %></p>
+  </div>
+</div>
